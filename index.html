@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FormPilot — Private AI Form Filler. Your data never leaves your device.</title>
+<meta name="description" content="FormPilot fills any web form from your CV and documents using 100% on-device AI. No cloud, no account, no data collection. Free forever tier.">
+<style>
+  :root{--brand:#2563eb;--brand-d:#1e40af;--ink:#0f172a;--mut:#64748b;--bg:#f8fafc;--card:#fff;--ok:#059669}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+  .wrap{max-width:960px;margin:0 auto;padding:0 20px}
+  header{padding:18px 0;display:flex;align-items:center;justify-content:space-between}
+  .logo{font-weight:800;font-size:20px;color:var(--brand)}
+  .logo span{color:var(--ink)}
+  nav a{color:var(--mut);text-decoration:none;margin-left:18px;font-size:14px}
+  .hero{text-align:center;padding:64px 0 40px}
+  .hero h1{font-size:clamp(28px,5vw,46px);line-height:1.15;font-weight:800}
+  .hero h1 em{color:var(--brand);font-style:normal}
+  .hero p{max-width:620px;margin:18px auto 0;color:var(--mut);font-size:18px}
+  .cta{display:inline-block;margin-top:28px;background:var(--brand);color:#fff;font-weight:700;padding:14px 28px;border-radius:12px;text-decoration:none;font-size:16px}
+  .cta:hover{background:var(--brand-d)}
+  .sub{display:block;margin-top:10px;color:var(--mut);font-size:13px}
+  .badges{margin-top:22px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+  .badge{background:#eff6ff;color:var(--brand-d);border:1px solid #bfdbfe;border-radius:999px;padding:6px 14px;font-size:13px;font-weight:600}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;padding:40px 0}
+  .card{background:var(--card);border:1px solid #e2e8f0;border-radius:16px;padding:22px}
+  .card h3{font-size:16px;margin-bottom:8px}
+  .card p{color:var(--mut);font-size:14px}
+  .ic{font-size:22px;display:block;margin-bottom:10px}
+  .pricing{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;padding:8px 0 48px}
+  .tier{background:var(--card);border:2px solid #e2e8f0;border-radius:16px;padding:26px}
+  .tier.pro{border-color:var(--brand)}
+  .tier h3{font-size:18px}
+  .price{font-size:34px;font-weight:800;margin:8px 0}
+  .price small{font-size:14px;color:var(--mut);font-weight:400}
+  .tier ul{list-style:none;margin-top:14px}
+  .tier li{padding:5px 0;font-size:14px;color:var(--ink)}
+  .tier li::before{content:"✓ ";color:var(--ok);font-weight:700}
+  .tier .cta{width:100%;text-align:center;margin-top:18px}
+  .tier .soon{background:#e2e8f0;color:var(--mut);cursor:default}
+  h2{font-size:26px;text-align:center;padding-top:34px}
+  .privacy-strip{background:var(--ink);color:#e2e8f0;text-align:center;padding:26px 16px;border-radius:16px;margin:10px 0 40px}
+  .privacy-strip b{color:#93c5fd}
+  footer{border-top:1px solid #e2e8f0;margin-top:20px;padding:26px 0;color:var(--mut);font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+  footer a{color:var(--mut)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo">⚡ Form<span>Pilot</span></div>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#pricing">Pricing</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Fill any form in seconds.<br><em>Your data never leaves your device.</em></h1>
+    <p>FormPilot reads your CV and documents with on-device AI, builds your private profile,
+       and fills job, visa, bank and government forms — offline, with zero data collection.</p>
+    <a class="cta" href="#install" id="install">Add to Chrome — Free</a>
+    <span class="sub">Chrome Web Store listing coming online — this page will link straight to it.</span>
+    <div class="badges">
+      <span class="badge">🔒 100% on-device AI</span>
+      <span class="badge">📡 Works offline</span>
+      <span class="badge">🚫 No account needed</span>
+      <span class="badge">🇵🇰 Built in Karachi</span>
+    </div>
+  </section>
+
+  <div class="privacy-strip">
+    <b>The anti-cloud form filler.</b> Other autofill tools upload your CV to their servers.
+    FormPilot's brain runs inside your browser — technically <b>unable</b> to steal your data.
+  </div>
+
+  <h2 id="features">What it does</h2>
+  <section class="grid">
+    <div class="card"><span class="ic">📄</span><h3>Understands your documents</h3>
+      <p>Drop in a CV, ID card or any PDF/Word/image. On-device OCR + AI extract your details —
+         education, every job with dates, contacts — into a structured private vault.</p></div>
+    <div class="card"><span class="ic">⚡</span><h3>Fills the hard forms</h3>
+      <p>Multi-step job applications, repeating work-history blocks, date-format quirks —
+         FormPilot maps the right value to the right field and self-heals rejected formats.</p></div>
+    <div class="card"><span class="ic">🧠</span><h3>Learns from you</h3>
+      <p>Correct a field once and it remembers — per site and globally. Collect data back from
+         forms you've already filled with one click.</p></div>
+    <div class="card"><span class="ic">🔒</span><h3>Private by architecture</h3>
+      <p>No servers, no accounts, no analytics on your data. Profile lives in your browser's
+         local storage. Export/backup is yours, encrypted.</p></div>
+  </section>
+
+  <h2 id="pricing">Pricing</h2>
+  <section class="pricing">
+    <div class="tier">
+      <h3>Free</h3>
+      <div class="price">$0 <small>forever</small></div>
+      <ul>
+        <li>Unlimited form filling</li>
+        <li>On-device AI extraction</li>
+        <li>1 profile · 3 documents</li>
+        <li>Learning &amp; corrections</li>
+        <li>Works fully offline</li>
+      </ul>
+      <a class="cta" href="#install">Get started</a>
+    </div>
+    <div class="tier pro">
+      <h3>Pro</h3>
+      <div class="price">$4.99 <small>/month · $39/yr</small></div>
+      <ul>
+        <li>Everything in Free</li>
+        <li>Max-intelligence cloud brain (opt-in, no setup)</li>
+        <li>Unlimited profiles &amp; documents</li>
+        <li>Encrypted export &amp; device sync</li>
+        <li>Priority support</li>
+      </ul>
+      <a class="cta soon" href="#">Coming soon</a>
+    </div>
+  </section>
+
+  <footer>
+    <div>© 2026 FormPilot · Karachi, Pakistan</div>
+    <div><a href="privacy.html">Privacy Policy</a></div>
+  </footer>
+</div>
+</body>
+</html>
