@@ -116,7 +116,11 @@
         <li>Encrypted export &amp; device sync</li>
         <li>Priority support</li>
       </ul>
-      <a class="cta soon" href="#">Coming soon</a>
+      <div style="display:flex;gap:8px;margin-top:18px">
+        <button class="cta" style="flex:1;border:0;cursor:pointer" onclick="fpCheckout('month')">Go Pro — $4.99/mo</button>
+        <button class="cta" style="flex:1;border:0;cursor:pointer;background:var(--ink)" onclick="fpCheckout('year')">$39/yr</button>
+      </div>
+      <span class="sub" style="text-align:center">Cancel anytime · secure checkout by Paddle</span>
     </div>
   </section>
 
@@ -125,5 +129,26 @@
     <div><a href="privacy.html">Privacy Policy</a></div>
   </footer>
 </div>
+
+<!-- Paddle Billing checkout. To go LIVE: set environment to "production" and swap the
+     sandbox token + price IDs for the live ones (from your live Paddle account). -->
+<script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+<script>
+  var PADDLE = {
+    environment: "sandbox",                              // "production" when live
+    token: "test_0dfedb7fe3c7e396966355659af",           // sandbox client-side token
+    priceMonthly: "pri_01ky7mcjmctjk08vpp32my9qk9",
+    priceYearly: "pri_01ky7mep7e4zcy7nvfvmkq6jgn"
+  };
+  (function initPaddle(){
+    if(!window.Paddle){ return setTimeout(initPaddle, 200); }
+    if(PADDLE.environment === "sandbox"){ Paddle.Environment.set("sandbox"); }
+    Paddle.Initialize({ token: PADDLE.token });
+  })();
+  function fpCheckout(cycle){
+    if(!window.Paddle){ alert("Checkout is still loading — please try again in a second."); return; }
+    Paddle.Checkout.open({ items: [{ priceId: cycle === "year" ? PADDLE.priceYearly : PADDLE.priceMonthly, quantity: 1 }] });
+  }
+</script>
 </body>
 </html>
